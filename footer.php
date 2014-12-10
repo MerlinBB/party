@@ -13,6 +13,7 @@
 
 
         echo '<script src ="' . $theme . '/js/bower/jquery/dist/jquery.js"></script>';
+        echo '<script src ="' . $theme . '/js/bower/FlipClock/compiled/flipclock.js"></script>';
         echo '<script src ="' . $theme . '/js/bower/gsap/src/uncompressed/plugins/CSSPlugin.js"></script>';
         echo '<script src ="' . $theme . '/js/bower/gsap/src/uncompressed/TweenMax.js"></script>';
         echo '<script src ="' . $theme . '/js/bower/gsap/src/uncompressed/TimelineMax.js"></script>';

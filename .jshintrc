@@ -14,7 +14,10 @@
         "console": true,
         "alert": true,
         "module": true,
-        "TimelineMax", true,
+        "TimelineMax": true,
+        "SteppedEase": true,
+        "Back": true,
+        "Bounce": true,
         "require": true,
         "Modernizr": true
     }

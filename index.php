@@ -1,7 +1,12 @@
 <?php get_header(); ?>
 
 <div class="party">
-    <div class="wrap">
+
+    <div class="timer-wrapper">
+        <div class="timer"></div>
+    </div>
+
+    <div class="machine">
         <div class="inner" id="inner">
             <?php
                 $args = array('numberposts' => 8, 'category' => '2', 'orderby' => 'rand');
@@ -19,6 +24,7 @@
                 wp_reset_query();
             ?>
         </div>
+        <div class="mask"></div>
     </div>
 
     <div class="winner"></div>
