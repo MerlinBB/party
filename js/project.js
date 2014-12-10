@@ -12,7 +12,20 @@
         },
 
         windowLoaded: function () {
-            console.log("Loaded");
+
+            var inner = $("#inner");
+
+            var tl = new TimelineMax({
+                delay: 0,
+                repeat: 10,
+                repeatDelay: 0,
+                ease: "linear"
+                //onUpdate:updateStats,
+                //onRepeat:updateReps,
+                //onComplete:restart
+            });
+
+            tl.to(inner, 6, { rotationX: 720 });
         },
 
         windowResized: function () {

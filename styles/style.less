@@ -28,9 +28,8 @@
     text-shadow:none;
 }
 
-* { 
+* {
     box-sizing:border-box;
-    -moz-box-sizing:border-box;
 }
 
 .row { .make-row(); }
@@ -113,29 +112,37 @@ input[type="submit"] {
 //  Header
 //----------------------------------------------------------------------------//
 
-
-.page-header {
-    .menu {
-        li {
-
-        }
-        a:link,
-        a:visited {
-
-        }
-        .current-menu-item a,
-        .current-post-ancestor a,
-        a:hover,
-        a:focus {
-
-        }
+@size: 200px;
+.wrap {
+    margin:@size auto;
+    width:@size;
+    position:relative;
+    perspective:800px;
+    .inner {
+        position:absolute;
+        height:100%;
+        width:100%;
+        transform-style:preserve-3d;
+        transform-origin:(@size / 2) (@size / 2);
+        transform:rotateX(0deg);
     }
-    .sitename a {
-
+    .panel {
+        transform-origin:center;
+        position:absolute;
+        width:@size;
+        height:@size;
+        background:#666 url(img/dude.jpg) no-repeat center center;
+        background-size:cover;
+        -webkit-backface-visibility:hidden;
+        &#panel1 { transform:rotateX(0deg)    translateZ(240px); }
+        &#panel2 { transform:rotateX(45deg)   translateZ(240px); }
+        &#panel3 { transform:rotateX(90deg)   translateZ(240px); }
+        &#panel4 { transform:rotateX(135deg)  translateZ(240px); }
+        &#panel5 { transform:rotateX(180deg)  translateZ(240px); }
+        &#panel6 { transform:rotateX(225deg)  translateZ(240px); }
+        &#panel7 { transform:rotateX(270deg)  translateZ(240px); }
+        &#panel8 { transform:rotateX(315deg)  translateZ(240px); }
     }
-    @media (max-width:@screen-sm-min) { }
-    @media (max-width:@screen-md-min) { }
-    @media (max-width:@screen-lg-min) { }
 }
 
 
