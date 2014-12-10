@@ -50,73 +50,26 @@ body {
     font-size:@font-size-base;
     line-height:@line-height-base;
     color:@color-text;
+    background:#444;
+    height:100vh;
+    position:relative;
 }
 
 p { margin-bottom:@space; }
 
-
-//----------------------------------------------------------------------------//
-//  Links
-//----------------------------------------------------------------------------//
-
-
-a:link,
-a:visited {
-    color:@color-link;
-    text-decoration:none;
-}
-a:hover,
-a:focus,
-a:active {
-    color:@color-link-hover;
-    text-decoration:none;
-    outline:none;
+.party {
+    .position(absolute, 0, 0, 0, 0);
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
 }
 
 
-//----------------------------------------------------------------------------//
-//  Forms & Buttons
-//----------------------------------------------------------------------------//
-
-
-input[type='text'],
-input[type='email'],
-input[type='password'],
-textarea {
-    padding:(@space/2);
-    border:none;
-    .placeholder();
-    &:hover {
-
-    }
-    &:focus {
-        outline:none;
-        // Define your own focus styles here
-    }
-}
-
-.btn,
-button,
-input[type="submit"] {
-
-    &:hover {
-
-    }
-    &:focus {
-
-    }
-}
-
-
-//----------------------------------------------------------------------------//
-//  Header
-//----------------------------------------------------------------------------//
-
-@size: 200px;
+@size: 150px;
 .wrap {
-    margin:@size auto;
+    .position(absolute, auto, 0, (@size * 2), 0);
+    margin:0 auto;
     width:@size;
-    position:relative;
     perspective:800px;
     .inner {
         position:absolute;
@@ -134,31 +87,60 @@ input[type="submit"] {
         background:#666 url(img/dude.jpg) no-repeat center center;
         background-size:cover;
         -webkit-backface-visibility:hidden;
-        &#panel1 { transform:rotateX(0deg)    translateZ(240px); }
-        &#panel2 { transform:rotateX(45deg)   translateZ(240px); }
-        &#panel3 { transform:rotateX(90deg)   translateZ(240px); }
-        &#panel4 { transform:rotateX(135deg)  translateZ(240px); }
-        &#panel5 { transform:rotateX(180deg)  translateZ(240px); }
-        &#panel6 { transform:rotateX(225deg)  translateZ(240px); }
-        &#panel7 { transform:rotateX(270deg)  translateZ(240px); }
-        &#panel8 { transform:rotateX(315deg)  translateZ(240px); }
+        &:nth-child(1) { transform:rotateX(0deg)    translateZ((@size * 1.2)); }
+        &:nth-child(2) { transform:rotateX(45deg)   translateZ((@size * 1.2)); }
+        &:nth-child(3) { transform:rotateX(90deg)   translateZ((@size * 1.2)); }
+        &:nth-child(4) { transform:rotateX(135deg)  translateZ((@size * 1.2)); }
+        &:nth-child(5) { transform:rotateX(180deg)  translateZ((@size * 1.2)); }
+        &:nth-child(6) { transform:rotateX(225deg)  translateZ((@size * 1.2)); }
+        &:nth-child(7) { transform:rotateX(270deg)  translateZ((@size * 1.2)); }
+        &:nth-child(8) { transform:rotateX(315deg)  translateZ((@size * 1.2)); }
     }
 }
 
-
-//----------------------------------------------------------------------------//
-//  Content
-//----------------------------------------------------------------------------//
-
-.postnav { }
-
-//----------------------------------------------------------------------------//
-//  Footer
-//----------------------------------------------------------------------------//
-
-
-.page-footer {
-    @media (max-width:@screen-sm-min) { }
-    @media (max-width:@screen-md-min) { }
-    @media (max-width:@screen-lg-min) { }
+.winner, .dare {
+    background:brown;
+    font-family:'Trade Winds', cursive;
+    line-height:1;
+    z-index:1;
+    height:280px;
+    color: #381600;
+    font-size: 32px;
+    text-align:center;
+    text-shadow: 1px 1px 0 #ffd500, 2px 2px 0 #381600;
 }
+.winner {
+    .position(absolute, auto, auto, -300px, 50px);
+    width:400px;
+    background:url(img/sign1.png) no-repeat center top;
+    background-size:400px auto;
+    padding-top:60px;
+}
+
+.dare {
+    .position(absolute, auto, 50px, -380px, auto);
+    width:300px;
+    background:url(img/sign2.png) no-repeat center top;
+    background-size:300px auto;
+    padding:27px 20px;
+    text-align:center;
+    font-size:26px;
+}
+
+.spotlight {
+    .position(absolute, 0, 0, 0, 0);
+    background:url(img/spotlight.png) no-repeat center bottom;
+}
+
+.sprite-test {
+    background:#fff url(img/sprite.png) no-repeat 0 0;
+    height:128px;
+    width:128px;
+    overflow:hidden;
+    padding:10px;
+    margin:20px;
+}
+
+
+
+

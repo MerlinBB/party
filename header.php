@@ -17,6 +17,7 @@
     <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_uri(); ?>"/>
+    <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
 
     <link rel="shortcut icon" type="image/png" href="<?php bloginfo('template_url'); ?>/img/favicons/logo-icon-32x32.png">

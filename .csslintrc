@@ -1,7 +1,7 @@
 {
     "important": false,
     "adjoining-classes": false,
-    "known-properties": true,
+    "known-properties": false,
     "box-sizing": false,
     "box-model": false,
     "overqualified-elements": true,
@@ -15,7 +15,7 @@
     "empty-rules": true,
     "selector-max-approaching": true,
     "gradients": true,
-    "fallback-colors": true,
+    "fallback-colors": false,
     "font-sizes": true,
     "font-faces": true,
     "floats": true,

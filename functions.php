@@ -8,4 +8,12 @@
 
     // extend this file with www.wpfunction.me
 
+    // Enable thumbnails
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size(200, 200, true); // Normal post thumbnails
+
+
+    // Remove the admin bar from the front end
+    add_filter( 'show_admin_bar', '__return_false' );
+
 ?>
