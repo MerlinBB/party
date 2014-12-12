@@ -15,6 +15,7 @@
         "alert": true,
         "module": true,
         "TimelineMax": true,
+        "TweenMax": true,
         "SteppedEase": true,
         "Back": true,
         "Bounce": true,
