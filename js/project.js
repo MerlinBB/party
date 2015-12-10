@@ -3,11 +3,15 @@
 
     var party = {
 
-        wait: 20, // in seconds before starting the party
+        wait: party.getRandomArbitrary(180, 900), // in seconds before starting the party (3 - 15 mins)
 
         init: function () {
             party.countDown();
             party.bindActions();
+        },
+
+        getRandomArbitrary: function (min, max) {
+            return Math.random() * (max - min) + min;
         },
 
         bindActions: function () {
