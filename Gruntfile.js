@@ -94,6 +94,7 @@ module.exports = function (grunt) {
         concat: {
             dist: {
                 src: [
+                    "js/bower/FlipClock/compiled/flipclock.js",
                     "js/modernizr-custom.js",
                     "js/bower/jquery/dist/jquery.js",
                     "js/bower/jquery-smartresize/jquery.debouncedresize.js",
