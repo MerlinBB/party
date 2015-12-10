@@ -99,6 +99,9 @@ module.exports = function (grunt) {
                     "js/modernizr-custom.js",
                     "js/bower/jquery/dist/jquery.js",
                     "js/bower/jquery-smartresize/jquery.debouncedresize.js",
+                    "js/bower/gsap/src/uncompressed/plugins/CSSPlugin.js",
+                    "js/bower/gsap/src/uncompressed/TweenMax.js",
+                    "js/bower/gsap/src/uncompressed/TimelineMax.js",
                     "js/project.js"
                 ],
                 dest: "js/production.js"
