@@ -3,7 +3,7 @@
 
     var party = {
 
-        wait: 300, // in seconds before starting the party
+        wait: 20, // in seconds before starting the party
 
         init: function () {
             party.countDown();
@@ -17,15 +17,19 @@
         },
 
         countDown: function () {
+            var bird = $(".bird");
+
             var clock = $(".timer").FlipClock(party.wait, {
                 countdown: true,
                 clockFace: "MinuteCounter"
             });
-            var bird = $(".bird");
 
+            // clock plugin callbacks don't seem to work properly so we have to add our own
             var myInterval = setInterval(function () {
                 if (clock.getTime().time === 0) {
                     clearInterval(myInterval);
+                    // there's a slight diff between the reported time and whats visually on the timer
+                    // so we wait a while before removing it
                     setTimeout(function () {
                         party.setStage();
                         TweenMax.to(bird, 0.5, { transform: "translateX(-800px)", ease: Bounce.easeOut });
