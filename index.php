@@ -50,7 +50,7 @@
     <div class="flames"></div>
 
     <?php
-        $args = array('numberposts' => 1, 'category' => '3', 'orderby' => 'rand');
+        $args = array('numberposts' => 1, 'category' => '4', 'orderby' => 'rand');
         $lastposts = get_posts( $args );
         foreach($lastposts as $post) : setup_postdata($post);
     ?>
@@ -65,7 +65,7 @@
     ?>
 
     <?php
-        $args = array('numberposts' => 1, 'category' => '4', 'orderby' => 'rand');
+        $args = array('numberposts' => 1, 'category' => '3', 'orderby' => 'rand');
         $lastposts = get_posts( $args );
         foreach($lastposts as $post) : setup_postdata($post);
     ?>
